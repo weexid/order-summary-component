@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    /* primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    background-image: url(./assets/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    background-color: var(--pale-blue) !important;
+}
+
+.container-card {
+    margin-top: 5rem;
+}
+
+.card {
+    max-width: 375px;
+    overflow: hidden;
+    border-radius: 15px !important;
+    border: none !important;
+    background-color: var(--very-pale-blue) !important;
+    /* display: none !important; */
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    background: url("./assets/illustration-hero.svg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.card-contents {
+    padding: 2rem 1.2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--dark-blue) !important;
+}
+
+.card-contents h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    /* color: black !important; */
+}
+
+.card-contents p {
+    color: var(--desaturated-blue);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.plan {
+    margin: 0 25px;
+}
+
+.plan img {
+    width: 38px;
+}
+
+.plan a:hover {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.plan-info {
+    margin-right: auto !important;
+}
+
+.plan-info span:nth-child(1) {
+    font-weight: bolder !important;
+}
+
+.plan-info span:nth-child(2) {
+    font-size: .89rem;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+.plan-container div:last-child {
+    margin-top: 3rem;
+}
+
+.btn-proceed {
+    background-color: var(--bright-blue) !important;
+    color: var(--pale-blue) !important;
+    padding: 12px 0 !important;
+    border-radius: 10px !important;
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 700 !important;
+    transition: background .5s ease-out, box-shadow .5s ease-out !important;
+}
+
+.btn-proceed:hover {
+    background-color: hsl(245, 83%, 68%) !important;
+    box-shadow: -2px 15px 37px -10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cancel {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--desaturated-blue) !important;
+}
+
+.btn-cancel:hover {
+    font-weight: bold;
+    color: hsl(240, 50%, 1%) !important;
+}
+
+@media (min-width: 375px) {
+    body {
+        background-image: url('./assets/pattern-background-desktop.svg') !important;
+        background-size: contain;
+        background-position-y: -25%;
+    }
+}
